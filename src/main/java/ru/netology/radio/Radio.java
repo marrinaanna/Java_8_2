@@ -9,37 +9,46 @@ public class Radio {
         }
         return;
     }
-    public int getCurrentRadioStationNumber(){
+
+    public int getCurrentRadioStationNumber() {
         return currentRadioStationNumber;
     }
+
     public int next() {
         if (currentRadioStationNumber == 9) {
-            return 0;
+            currentRadioStationNumber = 0;
+            return currentRadioStationNumber;
         }
         currentRadioStationNumber += 1;
         return currentRadioStationNumber;
     }
 
     public int prev() {
-        if(currentRadioStationNumber==0){
-        return 9;}
-        currentRadioStationNumber-=1;
+        if (currentRadioStationNumber == 0) {
+            currentRadioStationNumber = 9;
+            return currentRadioStationNumber;
+        }
+        currentRadioStationNumber -= 1;
         return currentRadioStationNumber;
     }
+
     private int currentVolumeLevel;
-    public void increaseCurrentVolumeLevel(){
-        if(currentVolumeLevel<10){
-            currentVolumeLevel+=1;
+
+    public void increaseCurrentVolumeLevel() {
+        if (currentVolumeLevel < 10) {
+            currentVolumeLevel += 1;
         }
         return;
     }
-    public void decreaseCurrentVolumeLevel(){
-        if(currentVolumeLevel>0){
-            currentVolumeLevel-=1;
+
+    public void decreaseCurrentVolumeLevel() {
+        if (currentVolumeLevel > 0) {
+            currentVolumeLevel -= 1;
         }
         return;
     }
-    public int getCurrentVolumeLevel(){
-       return currentVolumeLevel;
+
+    public int getCurrentVolumeLevel() {
+        return currentVolumeLevel;
     }
 }
