@@ -79,6 +79,34 @@ public class RadioTest {
         int expected = 2;
         assertEquals(expected, actual);
     }
+    @Test
+    void shouldNotIncreaseCurrentVolumeLevel() {
+        Radio rad = new Radio();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        rad.increaseCurrentVolumeLevel();
+        int actual = rad.getCurrentVolumeLevel();
+        int expected = 10;
+        assertEquals(expected, actual);
+    }
 
     @Test
     void shouldDecreaseCurrentVolumeLevel() {
@@ -89,6 +117,14 @@ public class RadioTest {
         rad.decreaseCurrentVolumeLevel();
         int actual = rad.getCurrentVolumeLevel();
         int expected = 2;
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldNotDecreaseCurrentVolumeLevel() {
+        Radio rad = new Radio();
+        rad.decreaseCurrentVolumeLevel();
+        int actual = rad.getCurrentVolumeLevel();
+        int expected = 0;
         assertEquals(expected, actual);
     }
 
