@@ -84,7 +84,7 @@ public class RadioTest {
 
     @Test
     void shouldNotIncreaseCurrentVolumeLevel() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
         rad.setCurrentVolumeLevel(rad.maxVolumeLevel);
         rad.increaseCurrentVolumeLevel();
         int actual = rad.getCurrentVolumeLevel();
@@ -94,7 +94,7 @@ public class RadioTest {
 
     @Test
     void shouldDecreaseCurrentVolumeLevel() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
         rad.setCurrentVolumeLevel(rad.maxVolumeLevel);
         rad.decreaseCurrentVolumeLevel();
         int actual = rad.getCurrentVolumeLevel();
@@ -104,7 +104,7 @@ public class RadioTest {
 
     @Test
     void shouldNotDecreaseCurrentVolumeLevel() {
-        Radio rad = new Radio(1);
+        Radio rad = new Radio();
         rad.decreaseCurrentVolumeLevel();
         int actual = rad.getCurrentVolumeLevel();
         int expected = 0;

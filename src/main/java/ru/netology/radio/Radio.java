@@ -3,11 +3,15 @@ package ru.netology.radio;
 public class Radio {
     private int currentRadioStationNumber;
     private int currentVolumeLevel;
-    private int stationCount;
+    private int stationCount=10;
     public int maxVolumeLevel = 100;
 
-    public Radio(int stationCount) {
+    public Radio(int stationCount)
+    {
         this.stationCount = stationCount;
+    }
+    public Radio()
+    {
     }
 
     public void setCurrentRadioStationNumber(int newCurrentRadioStationNumber) {
